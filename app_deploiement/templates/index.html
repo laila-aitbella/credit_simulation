@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html >
+<!--From https://codepen.io/frytyler/pen/EGdtg-->
+<head>
+  <meta charset="UTF-8">
+  <title>Credit APP</title>
+  <link href='https://fonts.googleapis.com/css?family=Pacifico' rel='stylesheet' type='text/css'>
+<link href='https://fonts.googleapis.com/css?family=Arimo' rel='stylesheet' type='text/css'>
+<link href='https://fonts.googleapis.com/css?family=Hind:300' rel='stylesheet' type='text/css'>
+<link href='https://fonts.googleapis.com/css?family=Open+Sans+Condensed:300' rel='stylesheet' type='text/css'>
+<link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+  
+</head>
+
+<body>
+ <div class="login">
+	<h1>Credit Simulation</h1>
+  
+      <!-- Main Input For Receiving Query to our ML -->
+      <form action="{{ url_for('predict')}}" method="post">
+        <div class="form-group">
+            <label for="Credit_History">Credit History (0 for No, 1 for Yes):</label>
+            <input type="text" id="Credit_History" name="Credit_History" placeholder="Credit_History" required="required" />
+        </div>
+        <div class="form-group">
+            <label for="Married">Marital Status (0 for Single, 1 for Married):</label>
+            <input type="text" id="Married" name="Married" placeholder="Married" required="required" />
+        </div>
+        <div class="form-group">
+            <label for="CoapplicantIncome">Applicant Income:</label>
+            <input type="text" id="ApplicantIncome" name="ApplicantIncome" placeholder="ApplicantIncome" required="required" />
+        </div>
+        <button type="submit" class="btn btn-primary btn-block btn-large">Predict</button>
+    </form>
+
+   <br>
+   <br>
+   {{ prediction_text }}
+
+ </div>
+ 
+
+
+</body>
+</html>
