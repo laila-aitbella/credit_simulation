@@ -1,7 +1,7 @@
 
 # Credit Simulation App
 
-The Credit Simulation App is a web application designed to predict credit approval status based on user inputs. The app utilizes a machine learning model to analyze credit history, marital status, and coapplicant income to determine whether a user's credit application will be approved or denied.
+The Credit Simulation App is a web application designed to predict credit approval status based on user inputs. The app utilizes a machine learning model to analyze credit history, marital status, and applicant income to determine whether a user's credit application will be approved or denied.
 
 ## Table of Contents
 
